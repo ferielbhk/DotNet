@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,10 @@ namespace AM.ApplicationCore.Domain
         public int EstimatedDuration { get; set; }
         //objets de navigation
         public Plane Plane { get; set; }
+        //foreignkey (ism l objet)
+        //kan jyna amlin public Plane Pl{ get; set; }==> [ForeignKey("Pl")]
+        [ForeignKey("Plane")]
+        public int PlaneFK { get; set; }
         public ICollection<Passenger> Passengers { get; set; }
         public override string ToString()
         {

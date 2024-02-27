@@ -12,22 +12,22 @@ namespace AM.ApplicationCore.Domain
         [Key]
         [StringLength(7)]
         public string PassportNumber { get; set; }
-        [MinLength(3 , ErrorMessage ="Minimm 3 caracteres ")]
-        [MaxLength(25 , ErrorMessage ="Maxmm 25 caracteres")]
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public FullName FullName { get; set; }
         [Display(Name ="Date of birth")]
+        [DataType(DataType.Date)]
         public DateTime BirthDate { get; set; }
+        [DataType(DataType.EmailAddress)]
         public string EmailAdress { get; set; }
+        [RegularExpression("^[0-9]{8}$")]
         public string PhoneNumber { get; set; }
         public ICollection<Flight> Flights { get; set; }
        
         public bool CheckProfile(string prenom, string nom,string email=null)
         {
             if(email!=null)
-            return (prenom.Equals(FirstName) && nom.Equals(LastName)&&email.Equals(EmailAdress));
+            return (prenom.Equals(FullName.FirstName) && nom.Equals(FullName.LastName)&&email.Equals(EmailAdress));
             else
-                return (prenom.Equals(FirstName) && nom.Equals(LastName));
+                return (prenom.Equals(FullName.FirstName) && nom.Equals(FullName.LastName));
 
         }
         public virtual void PassengerType()

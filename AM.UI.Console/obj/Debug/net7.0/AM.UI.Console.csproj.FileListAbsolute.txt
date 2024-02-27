@@ -106,3 +106,4 @@ C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.UI.Console
 C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.UI.Console\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.UI.Console\bin\Debug\net7.0\AM.Infrastructure.dll
 C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.UI.Console\bin\Debug\net7.0\AM.Infrastructure.pdb
+C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.UI.Console\obj\Debug\net7.0\AM.UI.Console.sourcelink.json

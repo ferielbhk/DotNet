@@ -15,3 +15,4 @@ C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.Infrastruc
 C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.Infrastructure\obj\Debug\net7.0\AM.Infrastructure.pdb
 C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.Infrastructure\obj\Debug\net7.0\AM.Infrastructure.genruntimeconfig.cache
 C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.Infrastructure\obj\Debug\net7.0\ref\AM.Infrastructure.dll
+C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.Infrastructure\obj\Debug\net7.0\AM.Infrastructure.sourcelink.json

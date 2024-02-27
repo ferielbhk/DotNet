@@ -34,3 +34,4 @@ C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.Applicatio
 C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.ApplicationCore\obj\Debug\net7.0\AM.ApplicationCore.pdb
 C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.ApplicationCore\obj\Debug\net7.0\ref\AM.ApplicationCore.dll
 C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.ApplicationCore\obj\Debug\net7.0\AM.ApplicationCore.csproj.AssemblyReference.cache
+C:\Users\betech.tn\Downloads\AirportManagementS3\AirportManagement\AM.ApplicationCore\obj\Debug\net7.0\AM.ApplicationCore.sourcelink.json

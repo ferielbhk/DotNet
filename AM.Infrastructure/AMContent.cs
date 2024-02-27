@@ -1,4 +1,5 @@
 ﻿using AM.ApplicationCore.Domain;
+using AM.Infrastructure.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,7 @@ namespace AM.Infrastructure
         public DbSet<Plane> Planes { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Traveller> Travellers { get; set; }
+        //configuration de la base
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,7 +26,25 @@ namespace AM.Infrastructure
                                         MultipleActiveResultSets=true");
             base.OnConfiguring(optionsBuilder);
         }
+        //fluent api
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //modelBuilder.ApplyConfiguration(new PlaneConfiguration());
+            modelBuilder.Entity<Plane>().HasKey(p => p.PlaneId);
+            modelBuilder.Entity<Plane>().ToTable("MyPlanes");
+            modelBuilder.Entity<Plane>().Property(p => p.Capacity).HasColumnName("PlaneCapacity");
+            modelBuilder.ApplyConfiguration(new FlightConfiguration());
+            //configurer type détenu
+            modelBuilder.Entity<Passenger>().OwnsOne(p => p.FullName);
 
+            base.OnModelCreating(modelBuilder);
+        }
+        //pre convention
+        protected override void ConfigureConventions(ModelConfigurationBuilder configurationBuilder)
+        {
+            configurationBuilder.Properties<DateTime>().HaveColumnType("datetime");
+            base.ConfigureConventions(configurationBuilder);
+        }
 
     }
 }
